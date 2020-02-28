@@ -1,4 +1,7 @@
 import time
+import pandas as pd
+import csv
+import random
 file = open("input.txt","r")
 
 line=file.readlines()
@@ -29,7 +32,8 @@ for i in line:
            count += 1
         end = time.time()
         t = end-start
-        print(t)
+        print("Request ID: ",random.randint(1,100),"Time: ",t,"N: ",N)
         timelist.append(t)
         
-
+df = pd.DataFrame({'Time':timelist})
+df.to_csv('RequestTime.csv',index=False)
