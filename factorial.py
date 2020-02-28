@@ -1,8 +1,6 @@
 import datetime
 import random
 import time
-import pandas as pd
-import csv
 
 def factorial(n):
     if(n == 0):
@@ -24,6 +22,3 @@ for i in list1:
     time_taken = (end_time-start_time)
     timelist.append(time_taken)
     print("Request ID : ", requestID ,"Time : ",time_taken,"Result : ",result,"N :",N)
-
-df = pd.DataFrame({'Request Time':timelist})
-df.to_csv('Request Time - Fact.csv',index=False)
