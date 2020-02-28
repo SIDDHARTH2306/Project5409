@@ -1,0 +1,25 @@
+import datetime
+import random
+import time
+
+def factorial(n):
+    if(n == 0):
+        return 1
+    else:
+        return n * factorial(n-1)
+
+
+f = open("input.txt", "r")
+list1=f.readlines()
+print(list1)
+
+for i in list1:
+    N=i
+    start_time = time.time()
+    result = factorial(int(i))
+    end_time = time.time()
+    requestID = random.randint(1,10)
+    time_taken = (end_time-start_time)
+    print("Request ID : ", requestID ,"Time : ",time_taken,"Result : ",result,"N :",N)
+
+
