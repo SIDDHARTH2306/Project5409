@@ -1,6 +1,9 @@
 import time
 import random
+<<<<<<< HEAD
 
+=======
+>>>>>>> 322b65af6b2abaca6df96ce8d7c8ba4a51e088ed
 file = open("input.txt","r")
 
 line=file.readlines()
